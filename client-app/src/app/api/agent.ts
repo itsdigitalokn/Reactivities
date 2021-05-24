@@ -30,7 +30,7 @@ const requests = {
 
 const Activities = {
     list: () => requests.get<Activity[]>('/activities'),
-    details: (id: String) => requests.get<Activity>(`/activity/${id}`),
+    details: (id: String) => requests.get<Activity>(`/activities/${id}`),
     create: (activity: Activity) => requests.post<void>('/activities', activity),
     update: (activity: Activity) => requests.put<void>(`/activities/${activity.id}`, activity),
     delete: (id: String) => requests.del<void>(`/activities/${id}`)
